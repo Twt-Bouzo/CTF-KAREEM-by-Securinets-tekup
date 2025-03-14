@@ -1,2 +1,2 @@
 # CTF-KAREEM-by-Securinets-tekup
-In this repository, I will upload write-ups for various CTF KAREEM challenges.
+This repository contains write-ups for various CTF KAREEM challenges, including some pwn and reverse engineering.
